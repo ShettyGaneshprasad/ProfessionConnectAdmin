@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "775214600067",
+    "firebase_url": "https://pofession-connect.firebaseio.com",
+    "project_id": "pofession-connect",
+    "storage_bucket": "pofession-connect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775214600067:android:7d26b71c875346bf6370b6",
+        "android_client_info": {
+          "package_name": "com.example.ProfessionConnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775214600067-k62i72mrh371jjtl5925hji1oip0l5tn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ProfessionConnect",
+            "certificate_hash": "f77f8840b1fcb66650465ecb59696fd96ee77d60"
+          }
+        },
+        {
+          "client_id": "775214600067-j14sfbmphkdhht6gn322e13amd606cs3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCSxzlZ_7cLgf5BNFhp8xCHlo6slufu8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775214600067-j14sfbmphkdhht6gn322e13amd606cs3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
