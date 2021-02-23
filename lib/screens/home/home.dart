@@ -13,6 +13,8 @@ import 'package:provider/provider.dart';
 import 'package:ProfessionConnect/models/githubJobs.dart';
 import 'package:ProfessionConnect/services/database.dart';
 import 'package:ProfessionConnect/screens/home/drawerScreen.dart/Profile/profileView.dart';
+import 'ApproveJobs/ApproveJobsDetails.dart';
+import 'ApproveJobs/jobsToBeApproved.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -126,8 +128,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                           )
                     : _page == 3
                         ? buildPage(3)
-                        : _page == 3
-                            ? buildPage(3)
+                        : _page == 4
+                            ? JobsToBeApproved()
                             : buildPage(4),
         bottomNavigationBar: buildCurvedNavigationBar(),
       ),
