@@ -119,7 +119,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         body: _page == 0
             ? DisplayProfessionConnectJobs()
             : _page == 1
-                ? buildPage(1)
+                ? JobsToBeApproved()
                 : _page == 2
                     ? _loading
                         ? Loading()
@@ -167,7 +167,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
           color: secondaryColor,
         ),
         Icon(
-          Icons.favorite_border,
+          Icons.done,
           size: 30,
           color: secondaryColor,
         ),

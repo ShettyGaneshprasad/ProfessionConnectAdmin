@@ -59,7 +59,18 @@ class _ProfessionConnectJobsDetailsState
                         duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
                   },
                 )
-              : Container(),
+              : IconButton(
+                  icon: Icon(
+                    Icons.delete_forever,
+                    color: Colors.red,
+                  ),
+                  onPressed: () {
+                    db.deleteJobData(jobId: widget.jobId);
+                    Navigator.pop(context);
+                    Toast.show("Deleted your Job", context,
+                        duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
+                  },
+                )
         ],
       ),
       body: Center(
