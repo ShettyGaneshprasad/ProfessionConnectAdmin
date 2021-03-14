@@ -117,4 +117,10 @@ class DatabaseService {
         Firestore.instance.collection('jobListing');
     collectionReference.document(jobId).delete();
   }
+
+  void deleteApproveJobData({String jobId}) {
+    CollectionReference collectionReference =
+        Firestore.instance.collection('jobsToBeApproved');
+    collectionReference.document(jobId).delete();
+  }
 }
