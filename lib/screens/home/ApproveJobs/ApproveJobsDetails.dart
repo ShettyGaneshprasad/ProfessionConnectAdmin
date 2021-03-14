@@ -45,19 +45,36 @@ class _ApproveJobsDetailsState extends State<ApproveJobsDetails> {
         ),
         centerTitle: true,
         actions: [
-          userdata.uid == widget.userUid
-              ? IconButton(
-                  icon: Icon(
-                    Icons.delete_forever,
-                  ),
-                  onPressed: () {
-                    db.deleteJobData(jobId: widget.jobId);
-                    Navigator.pop(context);
-                    Toast.show("Deleted your Job", context,
-                        duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
-                  },
-                )
-              : Container(),
+          IconButton(
+            icon: Icon(
+              Icons.done,
+            ),
+            onPressed: () {
+              db.deleteApproveJobData(jobId: widget.jobId);
+              db.updateJobData(
+                  widget.companyName,
+                  widget.location,
+                  widget.position,
+                  widget.salary,
+                  widget.description,
+                  widget.requirement);
+
+              Navigator.pop(context);
+              Toast.show("Job Approved", context,
+                  duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
+            },
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.delete,
+            ),
+            onPressed: () {
+              db.deleteApproveJobData(jobId: widget.jobId);
+              Navigator.pop(context);
+              Toast.show("Job Deleted/Disapproved", context,
+                  duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
+            },
+          ),
         ],
       ),
       body: Center(

@@ -3,7 +3,7 @@ import 'package:ProfessionConnect/shared/loading.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-
+import 'ApproveJobsDetails.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -17,7 +17,7 @@ class _JobsToBeApproved extends State<JobsToBeApproved> {
   List<DocumentSnapshot> professionConnectJob;
 
   final CollectionReference collectionReference =
-      Firestore.instance.collection("jobToBeApproved");
+      Firestore.instance.collection("jobsToBeApproved");
 
   @override
   void initState() {
@@ -104,7 +104,7 @@ class PCTile extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ProfessionConnectJobsDetails(
+            builder: (context) => ApproveJobsDetails(
               jobId: jobId,
               description: description,
               position: position,
