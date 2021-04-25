@@ -220,7 +220,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         },
       ),
       title: new Text(
-        'Profession Connect',
+        'P C Admin',
         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
       ),
       actions: <Widget>[
@@ -485,7 +485,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   final userdata = Provider.of<User>(context, listen: false);
                   DatabaseService db = DatabaseService(user: userdata);
 
-                  db.updateJobData(companyName, position, location, salary,
+                  db.updateJobData(companyName, location, position, salary,
                       jobDescription, jobRequirement);
                 } on Exception catch (_) {
                   Toast.show("Error in adding Job", context,

@@ -79,8 +79,11 @@ class _SignInState extends State<SignIn> {
                             /// -----------------------------------------
                             /// Header login text.
                             /// -----------------------------------------
+                            // SizedBox(
+                            //   height: 50,
+                            // ),
                             Text(
-                              "Login",
+                              "Login  for \n Profession Connect",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white70,
@@ -88,8 +91,13 @@ class _SignInState extends State<SignIn> {
                                   fontSize: 28.0),
                             ),
 
+                            // SizedBox(
+                            //   height: 25,
+                            // ),
+
                             /// -----------------------------------------
                             /// shaped Card with TextField child with it for adding username .
+                            ///
                             /// -----------------------------------------
                             Card(
                               margin:
@@ -127,6 +135,9 @@ class _SignInState extends State<SignIn> {
                                         horizontal: 20.0, vertical: 16.0)),
                               ),
                             ),
+                            // SizedBox(
+                            //   height: 50,
+                            // ),
 
                             /// -----------------------------------------
                             /// shaped Card with TextField child with it for adding Password .
@@ -139,6 +150,7 @@ class _SignInState extends State<SignIn> {
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(40))),
                               child: TextFormField(
+                                obscureText: true,
                                 validator: (val) => val.length < 6
                                     ? 'Enter a password 6+ chars long'
                                     : null,
@@ -171,6 +183,25 @@ class _SignInState extends State<SignIn> {
                             /// -----------------------------------------
                             /// shaped Container with RaisedButton child with it for Submitting login data.
                             /// -----------------------------------------
+
+                            /// -----------------------------------------
+                            /// Forgot your password text.
+                            /// -----------------------------------------
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 100,
+                      ),
+
+                      /// -----------------------------------------
+                      /// Aligned content to bottom of parent.
+                      /// -----------------------------------------
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: <Widget>[
                             Container(
                               width: double.infinity,
                               padding: EdgeInsets.all(30.0),
@@ -200,102 +231,12 @@ class _SignInState extends State<SignIn> {
                                     style: TextStyle(color: Colors.white70)),
                               ),
                             ),
-
-                            /// -----------------------------------------
-                            /// Forgot your password text.
-                            /// -----------------------------------------
-
                             Text(
                               "Forgot your password?",
                               style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 100,
-                      ),
-
-                      /// -----------------------------------------
-                      /// Aligned content to bottom of parent.
-                      /// -----------------------------------------
-                      Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            Text(
-                              "or , continue with",
-                              style: TextStyle(
-                                color: Colors.white70,
-                              ),
                             ),
                             SizedBox(
-                              height: 20.0,
-                            ),
-                            Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  width: 20.0,
-                                ),
-                                Expanded(
-                                  /// -----------------------------------------
-                                  /// RaisedButton login through facebook auth.
-                                  /// -----------------------------------------
-                                  child: RaisedButton(
-                                    child: Text("Google"),
-                                    textColor: Colors.white,
-                                    color: Colors.blue,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(40)),
-                                    ),
-                                    onPressed: () {
-                                      print('google');
-                                    },
-                                    // onPressed: ()
-                                    //     //     googleSignIn().whenComplete(() {
-                                    //     //   // FirebaseUser user =
-                                    //     //   //     await FirebaseAuth.instance.currentUser();
-
-                                    //     //   Navigator.of(context).pushReplacement(
-                                    //     //       MaterialPageRoute(
-                                    //     //           builder: (context) => HomePage()));
-                                    //     // }
-
-                                    //     async {
-                                    //   signInWithGoogle()
-                                    //       .then((FirebaseUser user) {
-                                    //     Navigator.of(context).pushReplacement(
-                                    //         MaterialPageRoute(
-                                    //             builder: (context) =>
-                                    //                 HomePage()));
-                                    //   }).catchError((e) => print(e));
-                                    // },
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Expanded(
-                                  /// -----------------------------------------
-                                  /// RaisedButton login through Twitter auth.
-                                  /// -----------------------------------------
-                                  child: RaisedButton(
-                                    child: Text("Facebook"),
-                                    textColor: Colors.white,
-                                    color: Colors.indigo,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(40)),
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 20.0,
-                                ),
-                              ],
+                              height: 50,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
